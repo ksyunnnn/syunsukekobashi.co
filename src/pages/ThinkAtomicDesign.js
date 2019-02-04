@@ -59,7 +59,7 @@ class ThinkAtomicDesignPage extends React.Component {
         <SEO title="ThinkAtomicDesign" />
         <Wrapper>
           <Header>
-            <Image />
+            <a href="https://thinkatomicdesign.connpass.com/" target="_blank"><Image /></a>
             <h1>ThinkAtomicDesign</h1>
           </Header>
           <Tab menu={{ secondary: true, pointing: true }} panes={
