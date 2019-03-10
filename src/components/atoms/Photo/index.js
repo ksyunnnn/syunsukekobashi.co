@@ -5,6 +5,7 @@ const Base = styled.img`
     display: inline-block;
     background-image: url(${props => props.url});
     background-size: cover;
+    box-shadow: 0px 2px 2px rgba(0,0,0,.25);
 `;
 
 const Small = styled(Base)`

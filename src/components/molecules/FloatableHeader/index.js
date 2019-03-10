@@ -7,6 +7,7 @@ const Wrapper = styled.header`
     position: fixed;
     width: 100%;
     background: #fff;
+    z-index: 99;
 `;
 
 export default ({ children, className }) => (

@@ -5,7 +5,10 @@ import Photo from '../../atoms/Photo';
 const Wrapper = styled.div`
   display: inline-block;
   > img {
-    ${props => (props.isSlected ? 'border: 2px #333 solid' : '')}
+    ${props => (props.isSlected ? `
+     filter: brightness(40%); 
+     transform: scale(.9)
+      ` : '')}
   }
 `;
 
