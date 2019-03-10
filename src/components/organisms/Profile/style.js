@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { media } from '../../../../helpers/media-query';
+import { media } from '../../../helpers/media-query';
 
 
 export const Anchor = styled(Link)`

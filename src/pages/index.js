@@ -3,10 +3,10 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import Header from '../components/atomic/organisms/Header';
-import Profile from '../components/atomic/organisms/Profile';
+import Header from '../components/organisms/Header';
+import Profile from '../components/organisms/Profile';
 
-import { MainContainer } from '../components/atomic/organisms/Profile/style';
+import { MainContainer } from '../components/organisms/Profile/style';
 
 const IndexPage = () => (
   <Layout>

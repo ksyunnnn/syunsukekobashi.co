@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import styled from 'styled-components';
-import { media } from '../../../../helpers/media-query';
+import { media } from '../../../helpers/media-query';
 
 const Wrapper = styled.header`
   font-size: 0.8em;
