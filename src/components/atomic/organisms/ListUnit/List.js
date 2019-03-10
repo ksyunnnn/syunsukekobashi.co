@@ -1,11 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
 
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
     cursor: pointer;
-    ${props=>props.selcted?`
+    ${props => (props.selcted ? `
         position: relative;
         :before {
             content: '';
@@ -16,7 +15,7 @@ const Wrapper = styled.div`
             position: absolute;
             left: -16px;
         }
-    `:``}
+    ` : '')}
     :after {
         content: '';
         display: block;
@@ -36,21 +35,23 @@ const Answer = styled.div`
 `;
 
 export default class List extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isSelcted: false,
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isSelcted: false,
+    };
+  }
 
-    toggleSelected = () => this.setState(prevState=>({isSelcted: !prevState.isSelcted}))
+    toggleSelected = () => this.setState(prevState => ({ isSelcted: !prevState.isSelcted }))
 
     render() {
-        return (
-            <Wrapper selcted={this.state.isSelcted} onClick={this.toggleSelected} >
-                <Answer>{this.props.answer}</Answer>
-                <small>{this.props.roles}</small>
-            </Wrapper>
-        );
-    }    
+      const { isSelcted } = this.state;
+      const { answer, roles } = this.props;
+      return (
+        <Wrapper selcted={isSelcted} onClick={this.toggleSelected}>
+          <Answer>{answer}</Answer>
+          <small>{roles}</small>
+        </Wrapper>
+      );
+    }
 }

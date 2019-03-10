@@ -1,9 +1,8 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import styled from 'styled-components';
-import { Colors } from '../../../../variables';
 import { media } from '../../../../helpers/media-query';
 
 const Wrapper = styled.header`
@@ -12,7 +11,7 @@ const Wrapper = styled.header`
   position: fixed;
   width: 100%;
   height: 50px;
-  color: ${Colors.black};
+  color: #333;
   padding: 0 80px;
   box-sizing: border-box;
   display: flex;
@@ -32,14 +31,14 @@ const Header = ({ siteTitle }) => (
   <Wrapper>
     <Logo>syunsukekobashi.co</Logo>
   </Wrapper>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: '',
+};
 
-export default Header
+export default Header;

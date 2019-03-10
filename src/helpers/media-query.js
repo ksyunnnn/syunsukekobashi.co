@@ -37,7 +37,6 @@ export const mediaMin = Object.keys(sizes).reduce((_accumulator, label) => {
 
 export const isMobileWindow = () => window && window.innerWidth <= sizes.phone;
 
-export const isTabletWindow = () =>
-  window && window.innerWidth >= sizes.phone && window.innerWidth <= sizes.desktop;
+export const isTabletWindow = () => window && window.innerWidth >= sizes.phone && window.innerWidth <= sizes.desktop;
 
 export const isPcWindow = () => window && window.innerWidth >= sizes.desktop;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { media } from '../../../../helpers/media-query';
 
-import { Link } from "gatsby"
 
 export const Anchor = styled(Link)`
   color: inherit;

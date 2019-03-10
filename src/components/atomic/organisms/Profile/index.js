@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
+import { Button } from 'semantic-ui-react';
 import { media } from '../../../../helpers/media-query';
 
 import ProfileMe from './ProfileMe';
 import ProfileWorks from './ProfileWorks';
 import ProfileSocial from './ProfileSocial';
 
-import { Button } from 'semantic-ui-react';
 
 export const ProfileCard = styled.div`
   :not(:last-child) {
@@ -52,22 +52,20 @@ const ProfileContainer = styled.div`
   margin-bottom: 160px;
 `;
 
-export default props => {
-  return (
-    <TopContainer>
-      <ProfileContainer>
-        <ProfileMe />
-        <ProfileWorks />
-        <ProfileSocial />
-      </ProfileContainer>
+export default props => (
+  <TopContainer>
+    <ProfileContainer>
+      <ProfileMe />
+      <ProfileWorks />
+      <ProfileSocial />
+    </ProfileContainer>
 
-      <Button
-        onClick={() => window.open('https://m.me/ksyunnnn')}
-        size="large"
-        style={{ fontWeight: 'normal' }}
-      >
+    <Button
+      onClick={() => window.open('https://m.me/ksyunnnn')}
+      size="large"
+      style={{ fontWeight: 'normal' }}
+    >
         連絡をとる
-      </Button>
-    </TopContainer>
-  );
-};
+    </Button>
+  </TopContainer>
+);

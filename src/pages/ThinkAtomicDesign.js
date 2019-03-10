@@ -1,12 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Tab } from 'semantic-ui-react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
-import { Tab } from 'semantic-ui-react'
-import ListUnit from '../components/atomic/organisms/ListUnit'
+import ListUnit from '../components/atomic/organisms/ListUnit';
 import Image from '../components/image';
 
 const Wrapper = styled.div`
@@ -34,7 +34,7 @@ class ThinkAtomicDesignPage extends React.Component {
     super(props);
     this.state = {
       isLoading: true,
-      questions: []
+      questions: [],
     };
   }
 
@@ -44,37 +44,41 @@ class ThinkAtomicDesignPage extends React.Component {
     )
       .then(res => res.json())
       .then(
-      result => {
-        this.setState({
-          isLoading: false,
-          questions: result
-        })
-      }
-    )
+        (result) => {
+          this.setState({
+            isLoading: false,
+            questions: result,
+          });
+        },
+      );
   }
 
   render() {
+    const { questions, isLoading } = this.state;
     return (
       <Layout>
         <SEO title="ThinkAtomicDesign" />
         <Wrapper>
           <Header>
-            <a href="https://thinkatomicdesign.connpass.com/" target="_blank"><Image /></a>
+            <a href="https://thinkatomicdesign.connpass.com/" target="_blank" rel="noopener noreferrer"><Image /></a>
             <h1>ThinkAtomicDesign</h1>
           </Header>
-          <Tab menu={{ secondary: true, pointing: true }} panes={
+          <Tab
+            menu={{ secondary: true, pointing: true }}
+            panes={
             [
-              { menuItem: '第2回', render: () => <ListUnit data={this.state.questions.filter(question => question.times == 2)} isLoading={this.state.isLoading} /> },
-              { menuItem: '第1回', render: () => <ListUnit data={this.state.questions.filter(question => question.times == 1)} isLoading={this.state.isLoading} /> },
+              { menuItem: '第2回', render: () => <ListUnit data={questions.filter(question => question.times === 2)} isLoading={isLoading} /> },
+              { menuItem: '第1回', render: () => <ListUnit data={questions.filter(question => question.times === 1)} isLoading={isLoading} /> },
             ]
-          } />
+          }
+          />
         </Wrapper>
         <Footer>
-          <small><a href="https://twitter.com/hashtag/ThinkAtomicDesign" target="_blank">#ThinkAtomicDesign</a></small>
+          <small><a href="https://twitter.com/hashtag/ThinkAtomicDesign" target="_blank" rel="noopener noreferrer">#ThinkAtomicDesign</a></small>
         </Footer>
       </Layout>
     );
   }
 }
 
-export default ThinkAtomicDesignPage
+export default ThinkAtomicDesignPage;
