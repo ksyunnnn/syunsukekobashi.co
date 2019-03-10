@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Button } from 'semantic-ui-react';
-import { media } from '../../../../helpers/media-query';
+import { media } from '../../../helpers/media-query';
 
 import ProfileMe from './ProfileMe';
 import ProfileWorks from './ProfileWorks';

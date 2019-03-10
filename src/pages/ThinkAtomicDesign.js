@@ -6,7 +6,7 @@ import { Tab } from 'semantic-ui-react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import ListUnit from '../components/atomic/organisms/ListUnit';
+import ListUnit from '../components/organisms/ListUnit';
 import Image from '../components/image';
 
 const Wrapper = styled.div`
