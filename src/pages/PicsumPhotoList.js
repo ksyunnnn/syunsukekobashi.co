@@ -59,7 +59,7 @@ const Notification = styled.small`
   `)}
 `;
 
-export default (props) => {
+export default () => {
   const [list, setList] = useState([]);
   const [photos, setPhotos] = useState([]);
   const [selectedPhotos, setSelectedPhotos] = useState([]);
@@ -89,12 +89,10 @@ export default (props) => {
   const toggleSelectedPhoto = (id) => {
     if (isSlected(id)) {
       const newState = selectedPhotos.filter(v => v.id !== id);
-      setSelectedPhotos([...newState]);
+      setSelectedPhotos(newState);
       return;
     }
-    const newState = selectedPhotos;
-    newState.push({ id });
-    setSelectedPhotos([...newState]);
+    setSelectedPhotos(selectedPhotos.concat([{ id }]));
   };
 
   useEffect(() => {
@@ -148,7 +146,7 @@ export default (props) => {
         sideRight={(
           <List>
             {selectedPhotos.map(v => (
-              <Button style={{ appearance: 'none' }} type="button" onClick={() => copyClipbord(`https://picsum.photos/160/?image=${v.id}`)}>
+              <Button key={v.id} style={{ appearance: 'none' }} type="button" onClick={() => copyClipbord(`https://picsum.photos/160/?image=${v.id}`)}>
                 <Photo src={`https://picsum.photos/160/?image=${v.id}`} alt={v.id} />
               </Button>
             ))}
