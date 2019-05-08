@@ -26,14 +26,14 @@ export default () => (
                 <br />
               </OnlySPWrapper>
               {' '}
-                / Pug / SCSS
+                / Vue / HTML/CSS
             </span>
           ),
         },
         {
           term: 'ツール',
           icon: 'fas fa-toolbox',
-          desc: 'Github / InVision / Parcel / Wordpress',
+          desc: 'Github / InVision / Figma',
         },
       ].map(v => (
         <FlexWrapper between key={v.term}>
