@@ -106,17 +106,27 @@ Twitter
 
         </li>
         <li>
-          <a href="https://www.facebook.com/ksyunnnn" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <i className="fas fa-external-link-alt" />
+          <a href="https://www.facebook.com/ksyunnnn" target="_blank" rel="noopener noreferrer">
+Facebook
+            <i className="fas fa-external-link-alt" />
+          </a>
+
         </li>
         <li>
-          <a href="https://medium.com/syunsukekobashi" target="_blank" rel="noopener noreferrer">Medium</a>
-          <i className="fas fa-external-link-alt" />
+          <a href="https://medium.com/syunsukekobashi" target="_blank" rel="noopener noreferrer">
+Medium
+            <i className="fas fa-external-link-alt" />
+          </a>
+
         </li>
         <li>
-          <a href="https://github.com/ksyunnnn" target="_blank" rel="noopener noreferrer">Github</a>
-          <i className="fas fa-external-link-alt" />
+          <a href="https://github.com/ksyunnnn" target="_blank" rel="noopener noreferrer">
+Github
+            <i className="fas fa-external-link-alt" />
+          </a>
+
         </li>
+        <p style={{ letterSpacing: '4px' }}>連絡はDMで。</p>
       </section>
     </Wrapper>
     <footer style={{ textAlign: 'center', lineHeight: '48px' }}><Link to="/"><i className="fas fa-glasses" /></Link></footer>
