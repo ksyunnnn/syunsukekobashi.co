@@ -10,36 +10,39 @@ import Header from '../components/organisms/Header';
 import { media } from '../helpers/media-query';
 
 const Wrapper = styled.main`
-  padding: 120px 16px;
-  max-width: 1040px;
-  margin: auto;
-  
-  h1 {
-    font-size: 120px;
-    &.ja {
-      font-size: 24px;
-      letter-spacing: 4px;
-      font-weight: 300;
-      text-align: right;
+  min-height: 100vh;
+
+  section.hero-view {
+    height: 100vh;
+    padding-top: 25vh;
+    h1 {
+    font-size: 18vh;
+      &.ja {
+        font-size: 3vh;
+        letter-spacing: 2rem;
+        font-weight: 300;
+      }
     }
+    ${media.phone`
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 18vw
+        &.ja {
+          font-size: 18px;
+          letter-spacing: 4px;
+          font-weight: 300;
+          text-align: right;
+        }
+      }
+      `}
   }
 
-  ${media.phone`
-  h1 {
-    font-size: 36px;
-    &.ja {
-      font-size: 18px;
-      letter-spacing: 4px;
-      font-weight: 300;
-      text-align: right;
-    }
-  }
-  `}
   section {
-    padding: 180px 0;
-    ${media.phone`
-    padding: 40px 0;
-    `}
+    padding: 180px 4vw;
   }
   p {
     padding: 24px 0;
@@ -72,12 +75,14 @@ const IndexPage = () => (
     <SEO title="Home" keywords={['portfolio', 'react', 'syunsukekobashi.co']} />
     <Header />
     <Wrapper>
-      <h1 className="en">
-SYUNSUKE
-        <br />
-KOBASHI
-      </h1>
-      <h1 className="ja">小橋俊介(コバシ シュンスケ)</h1>
+      <section className="hero-view">
+        <h1 className="en">
+          SYUNSUKE
+          <br />
+          KOBASHI
+        </h1>
+        <h1 className="ja">小橋俊介(コバシ シュンスケ)</h1>
+      </section>
       <section>
         <p>
         仕事は

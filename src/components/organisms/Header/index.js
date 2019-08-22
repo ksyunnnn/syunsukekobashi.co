@@ -22,8 +22,13 @@ const Wrapper = styled.header`
   }
 `;
 
+const msgs = ['こばしゅんさん、仕事ありますよ！', 'こばしゅんさん、5000兆円あげましょうか？', 'おっけい！じゃあ今から渋谷集合で！🍻', 'こばしゅんさん、応援しています！'];
+
+const getRandomInt = max => Math.floor(Math.random() * Math.floor(max));
+
 const Header = ({ siteTitle }) => (
   <Wrapper>
+    <a target="_blank" rel="noopener noreferrer" href={`https://twitter.com/intent/tweet?url=https://syunsukekobashi.co/&screen_name=ksyunnnn&text=${msgs[getRandomInt(msgs.length)]}`} className="twitter-hashtag-button" data-show-count="false"><i className="fab fa-twitter fa-lg" style={{ color: '#5c5c5c', fontSize: '16px', marginRight: '1rem' }} /></a>
     <Link to="/"><i className="fas fa-glasses" /></Link>
   </Wrapper>
 );
